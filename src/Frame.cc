@@ -746,7 +746,7 @@ void Frame::UndistortKeyPoints()
         mat.at<float>(i,0)=mvKeys[i].pt.x;
         mat.at<float>(i,1)=mvKeys[i].pt.y;
     }
-
+    cout << "cv::undistortPoints" << endl; // Yingfu
     // Undistort points
     mat=mat.reshape(2);
     cv::undistortPoints(mat,mat, static_cast<Pinhole*>(mpCamera)->toK(),mDistCoef,cv::Mat(),mK);
