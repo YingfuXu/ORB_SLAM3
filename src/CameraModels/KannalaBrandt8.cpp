@@ -211,7 +211,7 @@ namespace ORB_SLAM3 {
         cv::Mat K = this->toK();
         cv::fisheye::undistortPoints(vPts1,vPts1,K,D,R,K);
         cv::fisheye::undistortPoints(vPts2,vPts2,K,D,R,K);
-        std::cout << "cv::fisheye::undistortPoints" << std::endl; // Yingfu
+        // std::cout << "cv::fisheye::undistortPoints" << std::endl; // Yingfu
 
         for(size_t i = 0; i < vKeys1.size(); i++) vKeysUn1[i].pt = vPts1[i];
         for(size_t i = 0; i < vKeys2.size(); i++) vKeysUn2[i].pt = vPts2[i];
